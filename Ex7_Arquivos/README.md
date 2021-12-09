@@ -1,5 +1,5 @@
 # ✍️ Exercício 7
-Ainda utilizando o exercício 5 (*InfoFuncionario*), persistir os dados em arquivos textos com lagura fixa, apresentando:
+Ainda utilizando o [exercício 5](https://github.com/juliakonflanz/TreinamentoScadi/tree/main/Ex5_InfoFuncionarios), persistir os dados em arquivos textos com lagura fixa, apresentando:
 
 
 - Definição dos Arquivos
@@ -18,9 +18,11 @@ B) "*funcionario_idx01.idx*" contendo os dados da lista encadeada com a ordenaç
 
 C) "*funcionario_idx02.idx*" contendo os dados da lista encadeada com a ordenação por nome.
 
+---
 
 - Rotina para ler os dados desses arquivos e preencher a estrutura de dados da lista de funcionários (dados e encadeamentos).
 
+---
 
 - Listagem dos dados dos clientes:
 
