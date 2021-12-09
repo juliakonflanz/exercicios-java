@@ -1,5 +1,5 @@
 # ✍️ Exercício 6
-Transforme o exercicio 5 (*InfoFuncionario*) usando uma lista duplamente encadeada (que seja possível navegar entre os registro em ambos os sentidos, próximo e anterior), com as seguintes caracteristicas:
+Transforme o [exercicio 5](https://github.com/juliakonflanz/TreinamentoScadi/tree/main/Ex5_InfoFuncionarios) usando uma lista duplamente encadeada (que seja possível navegar entre os registro em ambos os sentidos, próximo e anterior), com as seguintes caracteristicas:
 
 - Encadeamento ordenado pelo **CodFuncionario**.
 - Encadeamento ordenado pelo **Nome**.
