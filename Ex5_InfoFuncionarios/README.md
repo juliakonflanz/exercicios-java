@@ -8,11 +8,11 @@ Tendo a estrutura de dados abaixo:
 **ValorSalario:** String
 
 **DataAdmissao:** Date
-
-
-Leia uma lista desses funcionário até que seja informado o CodFuncionario igual a zero, após concluir a leitura, apresentar:
-- Total de funcionarios.
-- Lista completa de funcionários mostrando o tempo de empresa de cada um deles (Data Atual - Data de Admissão).
-- Soma dos Salário.
-- Média dos Salário.
-- Dados do maior e do menor salário.
+ 
+ O programa contém:
+- Leitura de lista de funcionários com os dados acima até receber 0;
+- Quantidade total de funcionários;
+- Lista completa de funcionários mostrando o tempo de empresa de cada um deles (Data Atual - Data de Admissão);
+- Soma dos salários;
+- Média dos salários;
+- Dados dos funcionários com maior e menor salário.
