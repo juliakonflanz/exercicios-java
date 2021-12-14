@@ -1,5 +1,7 @@
 # ✍️ Exercício 2
-Leitura do salário de um colaborador e cálculo do valor do INSS de acordo com a tabela de valores abaixo, seguindo a regra usada no INSS:
+Supondo o salário de um colaborador, o programa contém:
+- Leitura do salário;
+- Cálculo do valor do INSS de acordo com a tabela de valores abaixo, seguindo a regra usada no INSS:
 
 | Salário do contribuinte | Alíquota de INSS |
 | --- | --- |
