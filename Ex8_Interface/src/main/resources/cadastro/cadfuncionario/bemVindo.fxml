@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="519.0" prefWidth="280.0" style="-fx-background-color: #369D79;">
+         <children>
+            <Pane prefHeight="180.0" prefWidth="280.0">
+               <children>
+                  <Label layoutX="105.0" layoutY="64.0" text="iCad" textFill="WHITE">
+                     <font>
+                        <Font name="Bauhaus 93" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnNovoCadastro" alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: #369D79;" text="NOVO CADASTRO" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnFuncionarios" alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="280.0" style="-fx-background-color: #369D79;" text="FUNCIONÁRIOS" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="GROUP" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnSair" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="280.0" style="-fx-background-color: #369D79;" text="SAIR" textFill="WHITE" />
+         </children>
+      </VBox>
+      <Pane fx:id="paneStatus" layoutX="280.0" layoutY="33.0" prefHeight="77.0" prefWidth="702.0" style="-fx-background-color: #3AF7AB;">
+         <children>
+            <Label fx:id="labelStatus" layoutX="608.0" layoutY="21.0" text="iCad" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="labelInfo" layoutX="362.0" layoutY="183.0" text="o iCad é um software livre desenvolvido para facilitar a gestão de funcionários da sua empresa." textFill="#369d79">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBemVindo" layoutX="327.0" layoutY="139.0" text="Bem vindo," textFill="#369d79">
+         <font>
+            <Font name="Bauhaus 93" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelInfo2" layoutX="362.0" layoutY="219.0" prefHeight="20.0" prefWidth="594.0" text="Para cadastrar um novo funcionário, acesse &quot;NOVO CADASTRO&quot; e preencha os campos com as" textFill="#369d79">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelInfo3" layoutX="362.0" layoutY="239.0" prefHeight="20.0" prefWidth="585.0" text="informações solicitadas." textFill="#369d79">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelInfo4" layoutX="362.0" layoutY="273.0" prefHeight="20.0" prefWidth="585.0" text="Se deseja visualizar ou editar a lista de funcionários já cadastrados, acesse &quot;FUNCIONÁRIOS&quot;." textFill="#369d79">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
