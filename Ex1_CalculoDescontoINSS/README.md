@@ -1,5 +1,5 @@
 # ✍️ Exercício 1
-Realizar a leitura do salário do colaborador e calcular o valor do INSS de acordo com a tabela de valores abaixo:
+Leitura do salário de um colaborador e cálculo do valor do INSS de acordo com a tabela de valores abaixo:
 
 | Salário do contribuinte | Alíquota de INSS |
 | --- | --- |
