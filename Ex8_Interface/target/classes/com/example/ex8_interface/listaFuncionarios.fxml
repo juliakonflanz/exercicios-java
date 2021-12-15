@@ -85,6 +85,6 @@
       </GridPane>
       <Button fx:id="btnOrdenaCodigo" layoutX="330.0" layoutY="648.0" mnemonicParsing="false" onAction="#btnOrdenaCodigoOnAction" prefHeight="25.0" prefWidth="248.0" text="ORDENAR POR CÓDIGO" />
       <Button fx:id="btnOrdenaNome" layoutX="578.0" layoutY="648.0" mnemonicParsing="false" onAction="#btnOrdenaNomeOnAction" prefHeight="25.0" prefWidth="248.0" text="ORDENAR POR NOME" />
-      <Pane layoutX="1126.0" layoutY="661.0" prefHeight="39.0" prefWidth="200.0" />
+      <Button fx:id="btnExcluir" layoutX="1078.0" layoutY="648.0" mnemonicParsing="false" onAction="#btnExcluirOnAction" prefHeight="25.0" prefWidth="248.0" text="EXCLUIR" />
    </children>
 </AnchorPane>
