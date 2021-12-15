@@ -31,6 +31,7 @@ public class listaFuncionariosController {
     @FXML private Button btnNovoCadastro;
     @FXML private Button btnOrdenaCodigo;
     @FXML private Button btnOrdenaNome;
+    @FXML private Button btnExcluir;
     @FXML private GridPane gridFuncionarios;
     @FXML private HBox hboxBuscaFuncionario;
     @FXML private Pane paneFuncionarios;
@@ -82,6 +83,11 @@ public class listaFuncionariosController {
 
     @FXML
     void btnOrdenaNomeOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnExcluirOnAction(ActionEvent event) {
 
     }
 
