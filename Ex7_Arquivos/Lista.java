@@ -1,8 +1,8 @@
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.util.Scanner;
 
 public class Lista {
+
     private No inicio;
     private No fim;
 
@@ -139,7 +139,7 @@ public class Lista {
         return funcionario;
     }
 
-    public double somaTodosSalarios(){
+    public double somaTodosSalarios() {
         No posicao = inicio;
         double somaSalarios = 0;
         while (posicao != null) {
@@ -149,7 +149,7 @@ public class Lista {
         return somaSalarios;
     }
 
-    public double mediaTodosSalarios(){
+    public double mediaTodosSalarios() {
         double soma, mediaSalarios;
         int tamanho;
         soma = somaTodosSalarios();
@@ -189,7 +189,7 @@ public class Lista {
         return funcionario;
     }
 
-    public void ordenaCodigo(){
+    public void ordenaCodigo() {
         boolean substitui;
         Funcionario funcionario;
         do {
@@ -225,55 +225,103 @@ public class Lista {
         }while (substitui);
     }
 
-    public String formataCodigo(Funcionario funcionario){
-        int codFuncionario = funcionario.getCodFuncionario();
-        String textoCodigo = "" + codFuncionario;
-        while (textoCodigo.length() < 6) {
-            textoCodigo = "0" + textoCodigo;
+    private String formataCodFuncionario(int codFuncionario) {
+        String txtCodFuncionario = "" + codFuncionario;
+        while (txtCodFuncionario.length()<6) {
+            txtCodFuncionario = "0" + txtCodFuncionario;
         }
-        return textoCodigo;
+        return txtCodFuncionario;
     }
 
-    public String formataNome(Funcionario funcionario){
-        String nome = funcionario.getNome();
-        String textoNome = "" + nome;
-        while (textoNome.length() < 100) {
-            textoNome = textoNome + "";
+    private String formataNomeFuncionario(String nomeFuncionario) {
+        while (nomeFuncionario.length()<100) {
+            nomeFuncionario = nomeFuncionario + " ";
         }
-        return textoNome;
+        return nomeFuncionario;
     }
 
-    public String formataSalario(Funcionario funcionario) {
-        String textoSalario = funcionario.getValorSalario().replace(",",".");
-        while (textoSalario.length() < 15) {
-            textoSalario = "0" + textoSalario;
+    private String formataValorSalario(String valorSalario) {
+        while (valorSalario.length()<16) {
+            valorSalario = "0" + valorSalario;
         }
-        return textoSalario;
+        return valorSalario;
     }
 
-    public String formataData(Funcionario funcionario) {
-    }
-
-    public void grava(String nomeArquivo) throws IOException {
+    private void criaArquivo(String nomeArquivo) throws IOException {
         No posicao = inicio;
-        FileWriter arquivo = new FileWriter("C:\\Users\\julia\\OneDrive\\Área de Trabalho\\Scadi\\ListaDuplamenteEncadeada\\src" + nomeArquivo);
-        PrintWriter gravarAquivo = new PrintWriter(arquivo);
+        FileWriter arquivo = new FileWriter("C:\\Users\\julia\\OneDrive\\Documentos\\Scadi\\Treinamento\\Ex8_Interface\\src\\main\\java\\listaEncadeada" + nomeArquivo);
+        PrintWriter grava = new PrintWriter(arquivo);
         while (posicao != null) {
-            gravarAquivo.printf("CodFuncionario -> " + formataCodigo(posicao.getFuncionario().getCodFuncionario()));
-            gravarAquivo.printf("\nNome -> " + formataNome(posicao.getFuncionario().getNome()));
-            gravarAquivo.printf("\nValorSalario -> " + formataSalario(posicao.getFuncionario().getValorSalario());
-            gravarAquivo.printf("\nDataAdmissao -> " + formataData(posicao.getFuncionario().getDataAdmissao()+"\n"));
+            grava.printf("CodFuncionario -> " + formataCodFuncionario(posicao.getFuncionario().getCodFuncionario()));
+            grava.printf("\nNome -> " + formataNomeFuncionario(posicao.getFuncionario().getNome()));
+            grava.printf("\nValorSalario -> " + formataValorSalario(posicao.getFuncionario().getValorSalario()));
+            grava.printf("\nDataAdmissao -> " + posicao.getFuncionario().getDataAdmissao()+"\n");
             posicao = posicao.getProximo();
         }
         arquivo.close();
     }
 
-    public void gravaArquivo() throws IOException {
-        this.grava("funcionario.dat");
-        this.ordenaCodigo();
-        this.grava("funcionario_idx01.idx");
-        this.ordenaNome();
-        this.grava("funcionario_idx02.idx");
+    public void salvaArquivo() throws IOException {
+        try {
+            this.criaArquivo("funcionario.dat");
+            this.ordenaCodigo();
+            this.criaArquivo("funcionario_idx01.idx");
+            this.ordenaNome();
+            this.criaArquivo("funcionario_idx02.idx");
+        } catch (NullPointerException e ){
+            System.out.println("Erro, sem registros.");
+        }
+    }
+
+    public void adicionaPorArquivo(Scanner in) {
+        int contLine = 0, codFuncionario = 0;
+        String nomeFuncionario = null, valorSalario = null, dataAdmissao = null;
+        while (in.hasNextLine()) {
+            String line = in.nextLine();
+            contLine++;
+            if (line.startsWith("CodFuncionario -> ")) {
+                int indice = 18;
+                while (line.charAt(indice) == '0') {
+                    indice++;
+                }
+                codFuncionario = Integer.parseInt(line.substring(indice));
+            }
+            if (line.startsWith("Nome -> ")) {
+                int indice = 8;
+                while (line.charAt(indice) == '0') {
+                    indice++;
+                }
+                nomeFuncionario = line.substring(indice);
+            }
+            if (line.startsWith("ValorSalario -> ")) {
+                int indice = 16;
+                while (line.charAt(indice) == '0') {
+                    indice++;
+                }
+                valorSalario = line.substring(indice);
+            }
+            if (line.startsWith("DataAdmissao -> ")) {
+                String dia, mes, ano;
+                dataAdmissao = line.substring(16);
+                ano = dataAdmissao.substring(0,4);
+                mes = dataAdmissao.substring(5,7);
+                dia = dataAdmissao.substring(8,10);
+                dataAdmissao = dia + "/" + mes + "/" + ano;
+            }
+            if (contLine%4==0) {
+                this.insereNoFim(new Funcionario(codFuncionario, nomeFuncionario, valorSalario, dataAdmissao));
+            }
+        }
+    }
+
+    public void leArquivo() {
+        try {
+            FileReader file = new FileReader("C:\\Users\\julia\\OneDrive\\Documentos\\Scadi\\Treinamento\\Ex8_Interface\\src\\main\\java\\listaEncadeada\\funcionario.dat");
+            Scanner scanner = new Scanner(file);
+            this.adicionaPorArquivo(scanner);
+        } catch (FileNotFoundException e){
+            System.out.println("Erro, arquivo não encontrado.");
+        }
     }
 
 }
