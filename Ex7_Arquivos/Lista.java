@@ -249,7 +249,7 @@ public class Lista {
 
     private void criaArquivo(String nomeArquivo) throws IOException {
         No posicao = inicio;
-        FileWriter arquivo = new FileWriter("C:\\Users\\julia\\OneDrive\\Documentos\\Scadi\\Treinamento\\Ex8_Interface\\src\\main\\java\\listaEncadeada" + nomeArquivo);
+        FileWriter arquivo = new FileWriter("C:\\Users\\julia\\OneDrive\\Documentos\\Scadi\\Treinamento\\Ex7_Arquivos" + nomeArquivo);
         PrintWriter grava = new PrintWriter(arquivo);
         while (posicao != null) {
             grava.printf("CodFuncionario -> " + formataCodFuncionario(posicao.getFuncionario().getCodFuncionario()));
@@ -316,7 +316,7 @@ public class Lista {
 
     public void leArquivo() {
         try {
-            FileReader file = new FileReader("C:\\Users\\julia\\OneDrive\\Documentos\\Scadi\\Treinamento\\Ex8_Interface\\src\\main\\java\\listaEncadeada\\funcionario.dat");
+            FileReader file = new FileReader("C:\\Users\\julia\\OneDrive\\Documentos\\Scadi\\Treinamento\\Ex7_Arquivos\\funcionario.dat");
             Scanner scanner = new Scanner(file);
             this.adicionaPorArquivo(scanner);
         } catch (FileNotFoundException e){
