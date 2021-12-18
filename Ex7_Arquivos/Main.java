@@ -1,9 +1,10 @@
+import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         DateTimeFormatter formatoData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         Lista listaFuncionario = new Lista();
         Scanner scanner = new Scanner(System.in);
@@ -55,30 +56,41 @@ public class Main {
             listaFuncionario.ordenaNome();
             listaFuncionario.imprimeLista();
 
-            System.out.println("\n\nINICIANDO GRAVACAO DE ARQUIVOS...");
-            listaFuncionario.gravaArquivo();
-            System.out.println("\nDados gravados nos arquivos.\n");
+            int opcao;
+            do {System.out.println("Selecione uma opção \n" +
+                    "1 -> Gravar arquivo \n" +
+                    "2 -> Ler arquivo \n" +
+                    "3 -> Sair \n");
+                opcao = scanner.nextInt();
+
+                switch (opcao){
+                    case 1: listaFuncionario.salvaArquivo(); break;
+                    case 2: listaFuncionario.leArquivo(); break;
+                    case 3: break;
+                    default: System.out.println("Opcao invalida"); break;
+                }
+            }while (opcao != 3);
+        }
 
 //            FUNÇÕES DO ALGORITMO NÃO SOLICITADAS NO EXERCÍCIO
-//
+
 //            System.out.println("\n\n\t\tREMOCAO\nRemovendo do inicio...");
 //            listaFuncionario.removeNoComeco();
 //            listaFuncionario.imprimeLista();
-//
+
 //            System.out.println("\n\n\t\tREMOCAO\nRemovendo do fim...");
 //            listaFuncionario.removeNoFim();
 //            listaFuncionario.imprimeLista();
-//
+
 //            System.out.println("\n\n\t\tREMOCAO\nInsira o codigo:");
 //            int codigoBusca;
 //            codigoBusca = scanner.nextInt();
 //            listaFuncionario.removePorCodigo(codigoBusca);
 //            listaFuncionario.imprimeLista();
-//
+
 //            System.out.println("\n\n\t\tBUSCA\nInsira o codigo: ");
 //            int codigoBusca = scanner.nextInt();
 //            listaFuncionario.buscaPorCodigo(codigoBusca);
-        }
 
         else {
             System.out.println("FIM");
