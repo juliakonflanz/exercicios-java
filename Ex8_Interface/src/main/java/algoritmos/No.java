@@ -1,19 +1,11 @@
-package algoritmos;
+package listaEncadeada;
 
-public class No {
-    private No anterior, proximo;
+public class No<listaEncadeada>{
+    private No proximo, anterior;
     private Funcionario funcionario;
 
-    public No(Funcionario funcionario) {
-        this.funcionario = funcionario;
-    }
-
-    public No getAnterior() {
-        return anterior;
-    }
-
-    public void setAnterior(No anterior) {
-        this.anterior = anterior;
+    public No(listaEncadeada funcionario) {
+        this.funcionario = (Funcionario) funcionario;
     }
 
     public No getProximo() {
@@ -24,12 +16,20 @@ public class No {
         this.proximo = proximo;
     }
 
+    public No getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(No anterior) {
+        this.anterior = anterior;
+    }
+
     public Funcionario getFuncionario() {
         return funcionario;
     }
 
-    public void setFuncionario(Funcionario funcionario) {
-        this.funcionario = funcionario;
+    public void setFuncionario(listaEncadeada funcionario) {
+        this.funcionario = (Funcionario) funcionario;
     }
 
 }
