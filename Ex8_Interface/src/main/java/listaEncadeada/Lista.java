@@ -50,11 +50,11 @@ public class Lista<listaEncadeada>{
     public void insereNoInicio(listaEncadeada funcionario) {
         No posicao = new No(funcionario);
         posicao.setProximo(inicio);
-        if(inicio != null) {
+        if (inicio != null) {
             inicio.setAnterior(posicao);
         }
         inicio = posicao;
-        if(fim == null) {
+        if (fim == null) {
             fim = posicao;
         }
     }
@@ -161,26 +161,6 @@ public class Lista<listaEncadeada>{
         }while (!ordem);
     }
 
-    public void infoSalarios() {
-        No posicao = inicio;
-        double somaSalario = 0, maiorSalario = 0;
-        double menorSalario = Double.parseDouble(posicao.getFuncionario().getValorSalario());
-        while (posicao != null) {
-            somaSalario += Double.parseDouble(posicao.getFuncionario().getValorSalario());
-            if (Double.parseDouble(posicao.getFuncionario().getValorSalario()) > maiorSalario) {
-                maiorSalario = Double.parseDouble(posicao.getFuncionario().getValorSalario());
-            }
-            if (Double.parseDouble(posicao.getFuncionario().getValorSalario()) < menorSalario) {
-                menorSalario = Double.parseDouble(posicao.getFuncionario().getValorSalario());
-            }
-            posicao = posicao.getProximo();
-        }
-        System.out.printf("\nSoma dos salários: R$ %.2f\n", somaSalario);
-        System.out.printf("\nMédia dos salários: R$ %.2f\n", somaSalario/this.tamanhoLista());
-        System.out.printf("\nMaior salário: R$ %.2f\n", maiorSalario);
-        System.out.printf("\nMenor salário: R$ %.2f\n", menorSalario);
-    }
-
     public String somaSalarios() {
         No posicao = inicio;
         double somaSalario = 0;
@@ -207,20 +187,6 @@ public class Lista<listaEncadeada>{
         return String.valueOf(maiorSalario);
     }
 
-    public listaEncadeada maiorSalario2() {
-        No posicao = inicio;
-        listaEncadeada funcionarioMaiorSalario = null;
-        double maiorSalario=0;
-        while (posicao != null) {
-            if (Double.parseDouble(posicao.getFuncionario().getValorSalario()) >= maiorSalario) {
-                maiorSalario = Double.parseDouble(posicao.getFuncionario().getValorSalario());
-                funcionarioMaiorSalario = (listaEncadeada) posicao.getFuncionario();
-            }
-            posicao = posicao.getProximo();
-        }
-        return funcionarioMaiorSalario;
-    }
-
     public String menorSalario(){
         No posicao = inicio;
         double menorSalario = Double.parseDouble(posicao.getFuncionario().getValorSalario());
@@ -231,20 +197,6 @@ public class Lista<listaEncadeada>{
             posicao = posicao.getProximo();
         }
         return String.valueOf(menorSalario);
-    }
-
-    public listaEncadeada menorSalario2(){
-        No posicao = inicio;
-        listaEncadeada funcionarioMenorSalario = null;
-        double menorSalario = Double.parseDouble(posicao.getFuncionario().getValorSalario());
-        while (posicao != null) {
-            if (Double.parseDouble(posicao.getFuncionario().getValorSalario()) <= menorSalario) {
-                menorSalario = Double.parseDouble(posicao.getFuncionario().getValorSalario());
-                funcionarioMenorSalario = (listaEncadeada) posicao.getFuncionario();
-            }
-            posicao = posicao.getProximo();
-        }
-        return funcionarioMenorSalario;
     }
 
     private String formataCodigo(int codFuncionario) {
@@ -351,20 +303,6 @@ public class Lista<listaEncadeada>{
         } catch (FileNotFoundException e){
             System.out.println("Arquivo não encontrado");
         }
-    }
-
-    public boolean confereCodigo(String cod) {
-        try{
-            int codFuncionario = Integer.parseInt(cod);
-            No posicao = inicio;
-            while (posicao != null) {
-                if(codFuncionario==posicao.getFuncionario().getCodFuncionario()){
-                    return false;
-                }
-                posicao = posicao.getProximo();
-            } }catch (NumberFormatException e){
-        }
-        return true;
     }
 
     public ObservableList<Funcionario> listaObservable() {
