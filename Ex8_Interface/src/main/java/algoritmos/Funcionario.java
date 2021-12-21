@@ -1,4 +1,4 @@
-package algoritmos;
+package listaEncadeada;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -9,8 +9,9 @@ public class Funcionario {
     private int codFuncionario;
     private String nome;
     private String valorSalario;
-    private LocalDate dataAdmissao; LocalDate dataAtual = LocalDate.now();
-    private final DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private LocalDate dataAdimissao;
+    private final LocalDate dataAtual = LocalDate.now();
+    private final DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 
     public Funcionario(int codFuncionario) {
         this.codFuncionario = codFuncionario;
@@ -20,7 +21,10 @@ public class Funcionario {
         this.codFuncionario = codFuncionario;
         this.nome = nome;
         this.valorSalario = valorSalario;
-        this.setDataAdmissao(dataAdmissao);
+        this.setDataAdimissao(dataAdmissao);
+    }
+
+    public Funcionario() {
     }
 
     public int getCodFuncionario() {
@@ -47,20 +51,21 @@ public class Funcionario {
         this.valorSalario = valorSalario;
     }
 
-    public LocalDate getDataAdmissao(){
-        return dataAdmissao;
+    public LocalDate getDataAdimissao() {
+        return dataAdimissao;
     }
 
-    public void setDataAdmissao(String dataAdmissao) {
-        this.dataAdmissao = LocalDate.parse(dataAdmissao, formato);
+    public void setDataAdimissao(String dataAdimissao) {
+        this.dataAdimissao = LocalDate.parse(dataAdimissao, formato);
     }
 
     public long tempodeEmpresa() {
-        return ChronoUnit.DAYS.between(this.dataAdmissao, dataAtual);
+        return ChronoUnit.DAYS.between(this.dataAdimissao, dataAtual);
     }
 
     @Override
     public String toString() {
-        return "FUNCIONARIO\n[Codigo: "+codFuncionario+"\nNome: " + nome + "\nSalario: R$ " + valorSalario + "\nTempo de empresa (em dias): " + tempodeEmpresa()+"]\n";
+        return "FUNCIONARIO\n[Codigo: " + codFuncionario + "\nNome: " + nome + "\nSalario: R$ " + valorSalario + "\nTempo de empresa (em dias): " + tempodeEmpresa() + "]\n";
     }
+
 }
