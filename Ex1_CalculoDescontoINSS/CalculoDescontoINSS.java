@@ -2,9 +2,8 @@ import java.util.Scanner;
 
 public class CalculoDescontoINSS {
         public static void main(String[] args) {
-
+                
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Informe o valor do salário: ");
         double salario = scanner.nextDouble();
 
@@ -25,7 +24,7 @@ public class CalculoDescontoINSS {
         if(salario <= tetoFaixa1){
             descontoINSS = aliquotaFaixa1 * salario;
         }
-
+                
         else if(salario <= tetoFaixa2){
             descontoINSS = aliquotaFaixa2 * salario;
         }
@@ -47,7 +46,6 @@ public class CalculoDescontoINSS {
         }
 
         System.out.format("O desconto do INSS, neste caso, é de R$ %.2f", descontoINSS);
-
         scanner.close();
     }
     
