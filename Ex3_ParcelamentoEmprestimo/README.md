@@ -10,7 +10,7 @@ Supondo um parcelamento de empréstimo em, no máximo, 12 vezes sem juros, o pro
 
 Valor financiado: R$ 100,00
 
-Nro de parcelas: 3
+Número de parcelas: 3
 
 | Parcela | Valor |
 | --- | --- |
