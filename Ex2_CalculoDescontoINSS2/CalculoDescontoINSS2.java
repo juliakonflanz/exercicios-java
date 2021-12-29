@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class CalculoDescontoINSS2 {
-
+    
     public static void main(String[] args) {
-
+        
         Scanner scanner = new Scanner(System.in);
         System.out.println("Informe o valor do salário: ");
         double salario = scanner.nextDouble();
@@ -50,7 +50,6 @@ public class CalculoDescontoINSS2 {
         }
 
         System.out.format("O desconto do INSS, neste caso, é de R$ %.2f", descontoINSS);
-
         scanner.close();
     }
 
