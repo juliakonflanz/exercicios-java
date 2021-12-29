@@ -4,13 +4,13 @@ Supondo um parcelamento de empréstimo em, no máximo, 12 vezes sem juros, o pro
 - Apresentação do valor a ser pago em cada parcela;
 - Totalização das parcelas calculadas com precisão decimal de duas casas.
 
-**Obs.:** O valor total das parcelas somadas, utilizando somente as duas casas decimais, deve ser igual ao valor financiado.
+O valor total das parcelas somadas, utilizando somente as duas casas decimais, deve ser igual ao valor financiado.
 
-**Por exemplo:**
+### Exemplo:
 
-Valor financiado: R$ 100,00
+- Valor financiado: R$ 100,00
 
-Número de parcelas: 3
+- Número de parcelas: 3
 
 | Parcela | Valor |
 | --- | --- |
