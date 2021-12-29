@@ -11,9 +11,10 @@ Supondo o salário de um colaborador, o programa contém:
 | De R$ 3.305,23 a R$ 6.433,57 | 14% |
 
 
-**Por exemplo:** Uma pessoa com salário de R$ 4 mil deverá calcular o valor do INSS em todas as faixas, considerando o limite de cada uma, e somar tudo, ao invés de usar apenas a alíquota da última faixa (14%).
+### Exemplo:
+Uma pessoa com salário de R$ 4 mil deverá calcular o valor do INSS em todas as faixas, considerando o limite de cada uma, e somar tudo, ao invés de usar apenas a alíquota da última faixa (14%).
 
-**Sendo assim:**
+Sendo assim:
 
 - 1ª faixa: R$ 1.100 x 7,5% = R$ 82,50
 
