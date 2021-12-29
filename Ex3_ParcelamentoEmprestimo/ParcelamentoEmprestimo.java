@@ -31,10 +31,9 @@ public class Parcelamentoemprestimo {
         }
 
         somaParcelas = (valorParcelas.multiply(qtdeParcelas)).add(diferenca);
-
+        
         System.out.println("-------------------");
         System.out.format("Total.....: R$ %.2f", somaParcelas);
-
         scanner.close();
     }
     
