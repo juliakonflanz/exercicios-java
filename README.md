@@ -1,4 +1,4 @@
-# 💼 Treinamento SCADIAgro
+# 💼 Exercícios em Java
 Algoritmos desenvolvidos durante o período de treinamento para Desenvolvedora de Software Estagiária na [SCADIAgro](https://scadiagro.com.br/).
 
 1. [Cálculo do desconto INSS](https://github.com/juliakonflanz/treinamentoScadi/tree/main/calculoDescontoINSS);
