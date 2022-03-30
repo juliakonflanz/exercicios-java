@@ -9,3 +9,10 @@ Algoritmos desenvolvidos durante o período de treinamento para Desenvolvedora d
 6. [Lista duplamente encadeada](https://github.com/juliakonflanz/treinamentoScadi/tree/main/listaDuplamenteEcadeada);
 7. [Manipulação/gravação em arquivos](https://github.com/juliakonflanz/treinamentoScadi/tree/main/manipulacaoArquivos);
 8. [Interface de cadastro](https://github.com/juliakonflanz/treinamentoScadi/tree/main/interfaceCadastro).
+
+<br/>
+<br/>
+
+**👩‍💻 Tecnologia utilizada:** <br/>
+<div style="display: inline_block">
+  <img align="center" alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
