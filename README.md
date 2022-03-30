@@ -1,5 +1,5 @@
 # 💼 Treinamento SCADIAgro
-Algoritmos em Java desenvolvidos durante o período de treinamento para Desenvolvedora de Software Estagiária na [SCADIAgro](https://scadiagro.com.br/).
+Algoritmos desenvolvidos durante o período de treinamento para Desenvolvedora de Software Estagiária na [SCADIAgro](https://scadiagro.com.br/).
 
 1. [Cálculo do desconto INSS](https://github.com/juliakonflanz/treinamentoScadi/tree/main/calculoDescontoINSS);
 2. [Cálculo do desconto INSS com tabela atualizada](https://github.com/juliakonflanz/treinamentoScadi/tree/main/calculoDescontoINSS2);
