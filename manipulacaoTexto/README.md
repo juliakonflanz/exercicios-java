@@ -5,11 +5,11 @@ Dado um determinado texto, apresente:
 
 - A quantidade de palavras.
 
-- Cada palavra e o nro de vezes que ela aparece no texto.
+- Cada palavra e o número de vezes que ela aparece no texto.
 
 - O texto na ordem inversa.
 
-- O texto, palavra por palavra na ordem inversa.
+- O texto, palavra por palavra, na ordem inversa.
 
 -----
 
