@@ -3,7 +3,7 @@ Algoritmos desenvolvidos durante o período de treinamento para Desenvolvedora d
 
 - [Cálculo do desconto INSS](https://github.com/juliakonflanz/treinamentoScadi/tree/main/calculoDescontoINSS);
 - [Cálculo do desconto INSS com tabela atualizada](https://github.com/juliakonflanz/treinamentoScadi/tree/main/calculoDescontoINSS2);
-- [Cálculo de parcelas de empréstimo](https://github.com/juliakonflanz/treinamentoScadi/tree/main/parcelamentoEmprestimo);
+- [Cálculo de parcelas](https://github.com/juliakonflanz/treinamentoScadi/tree/main/parcelamentoEmprestimo);
 - [Manipulação de texto](https://github.com/juliakonflanz/treinamentoScadi/tree/main/manipulacaoTexto);
 - [Manipulação de lista com informações de funcionários](https://github.com/juliakonflanz/treinamentoScadi/tree/main/infoFuncionarios);
 - [Lista duplamente encadeada](https://github.com/juliakonflanz/treinamentoScadi/tree/main/listaDuplamenteEcadeada);
