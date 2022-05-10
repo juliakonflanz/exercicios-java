@@ -7,9 +7,10 @@ Realizar a leitura do salário do colaborador e calcular o valor do INSS de acor
 | De R$ 1.100,01 a R$ 2.203,48 | 9% |
 | De R$ 2.203,49 a R$ 3.305,22 | 12% |
 | De R$ 3.305,23 a R$ 6.433,57 | 14% |
+<br>
 
-
-**Por exemplo:** Uma pessoa com salário de R$ 4 mil deverá calcular o valor do INSS em todas as faixas, considerando o limite de cada uma, e somar tudo, ao invés de usar apenas a alíquota da última faixa (14%).
+## Exemplo
+Uma pessoa com salário de R$ 4.000,00 deverá calcular o valor do INSS em todas as faixas, considerando o limite de cada uma, e somar tudo, ao invés de usar apenas a alíquota da última faixa (14%).
 
 **Sendo assim:**
 
