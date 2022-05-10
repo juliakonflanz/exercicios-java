@@ -1,18 +1,15 @@
 # ✍️ Exercício 3
-Suponhamos que estamos fazendo um empréstimo e gostariamos de fazer um parcelamento em no máximo 12 vezes sem juros.
 
-Leia o valor da compra e o número de parcelas e apresente o valor a ser pago em cada parcela. 
+Ler o valor total de uma compra juntamente ao número de parcelas e apresentar o valor a ser pago em cada parcela com precisão decimal de duas casas.
 
-Coloque no final o valor da totalização das parcelas calculadas com precisão decimal de duas casas.
+<br>
 
-**Obs.:** Como se trata de valor financeiro os cálculos das parcelas devem ser representados com a precisão de duas casas decimais.
-O valor total das parcelas somadas, utilizando somente as duas casas decimais, deve ser igual ao valor financiado.
+## Exemplo
+Suponhamos que uma compra de R$ 100,00 será parcelada em 4 vezes.
 
-**Por exemplo:**
+- Valor financiado: R$ 100,00
 
-Valor financiado: R$ 100,00
-
-Nro de parcelas: 4
+- Número de parcelas: 4
 
 | Parcela | Valor |
 | --- | --- |
